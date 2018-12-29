@@ -1,6 +1,14 @@
 steps:
-  - command: "dotnet publish -c Release -o published"
+  - command:
+      - "yarn install"
+      - "yarn run test"
     plugins:
       - docker#v2.1.0:
-          image: "microsoft/dotnet:latest"
+          image: "node:7"
           always-pull: true
+          workdir: "/app"
+          volumes:
+            - "./code:/app"
+          environment:
+            - "MY_SECRET_KEY"
+            - "MY_SPECIAL_BUT_PUBLIC_VALUE=kittens"
