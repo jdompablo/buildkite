@@ -4,5 +4,5 @@ steps:
       - "ansible --version"
     plugins:
       - docker#v2.1.0:
-          image: "ansible/ansible"
+          image: "ansible/ansible:centos7"
           always-pull: true
