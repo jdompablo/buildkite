@@ -1,4 +1,6 @@
 steps:
-  - label: Example Test
-    command: echo "Hello!"
-
+  - command: "dotnet publish -c Release -o published"
+    plugins:
+      - docker#v2.1.0:
+          image: "microsoft/dotnet:latest"
+          always-pull: true
