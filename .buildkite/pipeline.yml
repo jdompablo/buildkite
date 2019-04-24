@@ -2,14 +2,3 @@
 steps:
   - command:
       - "ansible --version"
-    plugins:
-      - docker#v2.1.0:
-          image: "ansible/centos7-ansible:stable"
-          always-pull: true
-
-  - command:
-      - "ansible --version"
-    plugins:
-      - docker#v2.1.0:
-          image: "ansible/centos7-ansible:stable"
-          always-pull: true
