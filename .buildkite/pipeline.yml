@@ -1,5 +1,4 @@
 
 steps:
-
   - command:
       - "ansible --version"
