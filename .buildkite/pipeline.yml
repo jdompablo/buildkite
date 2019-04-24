@@ -1,3 +1,4 @@
 steps:
   - command:
       - "ansible --version"
+      - "sbt sbtVersion"
